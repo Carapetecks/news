@@ -1,0 +1,9 @@
+<!-- Nav -->
+.nav {
+    color: slategrey;
+    text-transform: uppercase;
+    background: black;
+}
+.nav:hover{
+    color: black;
+}
