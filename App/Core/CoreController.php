@@ -8,7 +8,7 @@ class CoreController
 {
  public function index()
  {
-     include "Template/eheTeNandayo.html";
+     include "Template/eheTeNandayo.twig";
      echo 'index';
  }
  public function page()

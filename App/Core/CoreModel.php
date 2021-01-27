@@ -11,8 +11,12 @@ class CoreModel
     public $out=array();
     public function __construct($table)
     {
-    $this->db= new \mysqli(DB_HOST, DB_USER,DB_PASSWORD,DB_DATABASE);
-    $this->db-> set_charset('utf8');
+    $user = DB_USER;
+    $pass = DB_PASSWORD;
+    $host = DB_HOST;
+    $db = DB_NAME;
+    $this->db= new \PDO("mysql:dbname=$db; host=$host" , $user, $pass);
+    $this->db-> exec("SET NAMES 'utf8'");
     $this-> table = $table;
     }
     public function findUsingSlug($slug){}
@@ -23,6 +27,20 @@ class CoreModel
         $count = $result->Fetch_object()->c;
         $result->free();
         $this->db->close();
+    }
+    public function getAll()
+    {
+         $sql = 'SELECT * FROM' .$this->table;
+         $stat= $this -> db-> prepare($sql);
+         $stat -> execute();
+         while (($row= $stat ->fetch(\PDO::FETCH_ASSOC))){
+             $this -> out[] = $row;
+         }
+         return $this -> out;
+    }
+    public function getById($id)
+    {
+        дописать
     }
 
 }
