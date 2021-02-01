@@ -11,28 +11,31 @@
 
 <body>
 
-
+{% block content%}
 <div class="intro">
 
         <header class="header">
-
                     <div class="header_logo"> Невеселый PHP</div>
-
         </header>
+    {% for articles in articles %}
         <div class="intro_in">
             <h2 class="in_isD"> </h2>
+            <a href="\view\{{ articles.articles_id }}"><h2>{{ articles.name }}</h2></a>
+            <p>{{ articles.intro_text }}</p>
             <h1 class="in-title"> 1 </h1>
             <a class="btn" href="n.html"> Hot News </a>
         </div>
+    {% endfor %}
     </div>
 </div>
+{% endblock %}
 
 <div class="footer">
     &copy; 2021 Isaev Denis |
     Kabaev Sanek|
     Prosveschennikov Ruslan |
-    Mostovoy Bogdasar P.S. Vesyliy Hohol |
-    <a class="a1" href="https://github.com/RoborK">GitHub</a> |
+    Mostovoy Bogdasar P.S. Veseliy Hohol |
+    <a class="a1" href="https://github.com/Carapetecks">GitHub</a> |
     <a class="a1" href=""> Телеграм </a>
     <a class="a1" href=""></a>
     <a class="a1" href=""></a>

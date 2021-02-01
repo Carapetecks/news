@@ -18,16 +18,23 @@ class CoreModel
     $this->db= new \PDO("mysql:dbname=$db; host=$host" , $user, $pass);
     $this->db-> exec("SET NAMES 'utf8'");
     $this-> table = $table;
+        try{
+            $this->db = new \PDO("mysql:dbname=$db; host=$host" , $user, $pass);
+        }catch (\PDOException $e){
+            die($e->getMessage());
+        }
+
     }
+
     public function findUsingSlug($slug){}
-    public function count()
+    /*public function count()
     {
         $query = 'SELECT (*) AS c FROM'.$this ->table;
         $result = $this->db->query($query);
         $count = $result->Fetch_object()->c;
         $result->free();
         $this->db->close();
-    }
+    }*/
     public function getAll()
     {
          $sql = 'SELECT * FROM' .$this->table;
@@ -40,7 +47,30 @@ class CoreModel
     }
     public function getById($id)
     {
-        дописать
+        $result = array();
+        $sql = 'SELECT * FROM'. $this -> table.'WHERE id=$id';
+        $stmt = $this -> db -> prepare($sql);
+        $stmt -> bindValue(":id", id,\PDO::PARAM_INT);
+        $stmt -> execute();
+        $result = $stmt-> fetch(\PDO::FETCH_ASSOC);
+        if(empty($result))
+        {
+            return false;
+        }
+        else{
+            return $result;
+        }
     }
+    public function count()
+    {
+        $sql = "SELECT count(*) AS c FROM".$this->table;
+        $stmt = $this ->db->prepare($sql);
+        $stmt = execute();
+        $count = $stmt->fetch(\PDO::FETCH_OBJ);
+        return $count->c;
+
+    }
+
+
 
 }
