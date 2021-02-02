@@ -19,4 +19,12 @@ class CoreController
  {
      echo "<h1> page № $id </h1>";
  }
+ public function genshin()
+    {
+        echo "<h1> genshin </h1>";
+    }
+    public function php()
+    {
+        echo "<h1> php </h1>";
+    }
 }

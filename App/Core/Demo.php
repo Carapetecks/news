@@ -17,5 +17,12 @@ class Demo {
     {
         echo $id;
     }
-
+    public function genshin()
+    {
+        echo 'genshin';
+    }
+    public function php()
+{
+    echo 'php';
+}
 }

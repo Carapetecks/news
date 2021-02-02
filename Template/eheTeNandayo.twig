@@ -14,19 +14,19 @@
 {% block content%}
 <div class="intro">
 
-        <header class="header">
-                    <div class="header_logo"> Невеселый PHP</div>
-        </header>
-    {% for articles in articles %}
+    <header class="header">
+        <div class="header_logo"> Genshin Impact</div>
+    </header>
+{% for articles in articles %}
         <div class="intro_in">
             <h2 class="in_isD"> </h2>
-            <a href="\view\{{ articles.articles_id }}"><h2>{{ articles.name }}</h2></a>
+            <a href="\view\{{ articles.id }}"><h2>{{ articles.name }}</h2></a>
             <p>{{ articles.intro_text }}</p>
             <h1 class="in-title"> 1 </h1>
             <a class="btn" href="n.html"> Hot News </a>
         </div>
-    {% endfor %}
-    </div>
+{% endfor %}
+        </div>
 </div>
 {% endblock %}
 
