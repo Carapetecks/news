@@ -11,5 +11,7 @@ Macaw::get('genshin', 'Core\CoreController@genshin');
 Macaw::get('php', 'Core\CoreController@php');
 Macaw::get('page', 'Core\CoreController@page');
 Macaw::get('view/(:num)', 'App\SiteController@singleArticle');
+Macaw::get('/admin/login', 'App\AuthClass@logIn');
+
 
 Macaw::dispatch();
