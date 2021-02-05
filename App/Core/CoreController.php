@@ -11,9 +11,10 @@ class CoreController
      include "Template/eheTeNandayo.twig";
      echo 'index';
  }
- public function page()
+ public function viewSingleArticle()
  {
-     echo '<h1> page </h1>';
+     include "Template/page.twig";
+     echo 'PageView';
  }
  public function view($id)
  {

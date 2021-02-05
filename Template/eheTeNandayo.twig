@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <title>News</title>
+    <title>Hello</title>
 </head>
 
 <body>
@@ -19,11 +19,8 @@
     </header>
 {% for articles in articles %}
         <div class="intro_in">
-            <h2 class="in_isD"> </h2>
-            <a href="\view\{{ articles.id }}"><h2>{{ articles.name }}</h2></a>
-            <p>{{ articles.intro_text }}</p>
-            <h1 class="in-title"> 1 </h1>
-            <a class="btn" href="n.html"> Hot News </a>
+            <a class="btn" href="\view\"{{ articles.id }}> {{ articles.name }} </a>
+            <p>{{ articles.into_text }}</p>
         </div>
 {% endfor %}
         </div>

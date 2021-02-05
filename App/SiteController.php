@@ -9,10 +9,11 @@ class SiteController
     public $Articles;
     public $Categoryes;
     public $View;
+    public $PageView;
 
    public function __construct()
    {
-       $this->Articles = new AtriclesModel('articles');
+       $this->Articles = new ArticlesModel('articles');
        $this->Categoryes =new CategoriesModel('category');
        $this->View = new SiteView();
    }
@@ -27,8 +28,9 @@ class SiteController
 
    public function singleArticle($id)
    {
-       $article = $this->Articles->getSingleArticleById($id);
-       $this->dbg($article);
+       $articles_list = $this->Articles->getSingleArticleById($id);
+       $this->dbg($articles_list);
+       $this->PageView-> singleArticle($articles_list);
    }
 
    public function dbg($text)

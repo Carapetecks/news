@@ -12,4 +12,8 @@ class SiteView extends CoreView
     {
         echo $this->twig->render ('eheTeNandayo.twig',['articles'=>$article_list]);
     }
+    public function singleArticle($article_list, $category_list)
+    {
+        echo $this->twig->render('page.twig', ['articles'=>$article_list]);
+    }
 }

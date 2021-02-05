@@ -6,7 +6,7 @@ namespace App;
 
 use Core\CoreModel;
 
-class AtriclesModel extends CoreModel
+class ArticlesModel extends CoreModel
 {
     public function getSingleArticleById($id)
     {
