@@ -14,4 +14,9 @@ Macaw::get('view/(:num)', 'App\SiteController@singleArticle');
 Macaw::get('/admin/login', 'App\AuthClass@logIn');
 
 
+Macaw::get('/admin/', 'App\AdminPanelController@dashboard');
+
+
+
+
 Macaw::dispatch();

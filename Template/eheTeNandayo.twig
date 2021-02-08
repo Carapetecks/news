@@ -17,10 +17,10 @@
     <header class="header">
         <div class="header_logo"> Genshin Impact</div>
     </header>
-{% for articles in articles %}
+{% for article in articles %}
         <div class="intro_in">
-            <a class="btn" href="\view\"{{ articles.id }}> {{ articles.name }} </a>
-            <p>{{ articles.into_text }}</p>
+            <a class="btn" href="\view\{{ article.id }}"> {{ article.name }} </a>
+            <p>{{ article.into_text }}</p>
         </div>
 {% endfor %}
         </div>
