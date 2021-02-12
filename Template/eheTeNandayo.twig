@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div><a class="admin_btn" href="/admin/">admin</a></div>
 
 {% block content%}
 <div class="intro">
@@ -20,7 +21,7 @@
 {% for article in articles %}
         <div class="intro_in">
             <a class="btn" href="\view\{{ article.id }}"> {{ article.name }} </a>
-            <p>{{ article.into_text }}</p>
+            <p>{{ article.full_text }}</p>
         </div>
 {% endfor %}
         </div>

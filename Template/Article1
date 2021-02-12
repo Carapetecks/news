@@ -1,0 +1,17 @@
+{% extends "eheTeNandayo.twig" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div>
+                    <img class="card-img-top" src="{{ article.image_url }}" alt="">
+                    <div class="card-body">
+                        <a href="/view/{{ article.id }}"><h4 class="card-title">{{ article.name }}</h4> </a>
+                        <p class="card-text">{{ article.full_text }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

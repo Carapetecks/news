@@ -10,7 +10,7 @@ Macaw::get('/', 'App\SiteController@index');
 Macaw::get('genshin', 'Core\CoreController@genshin');
 Macaw::get('php', 'Core\CoreController@php');
 Macaw::get('PageView', 'Core\CoreController@viewSingleArticle');
-Macaw::get('view/(:num)', 'App\SiteController@singleArticle');
+Macaw::get('view/(:num)', 'App\SiteController@singleArticle.twig');
 Macaw::get('/admin/login', 'App\AuthClass@logIn');
 
 
