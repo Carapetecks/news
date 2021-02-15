@@ -7,7 +7,7 @@ $echo = "";
     <title>Админка</title>
     <link rel="stylesheet" href="admin.css">
 </head>
-<body>
+    <body>
 <div class='wrapper'>
     <main class='main' id='main'>
         <?echo $echo;?>

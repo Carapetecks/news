@@ -8,19 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Hello</title>
 </head>
-
-<body>
 <div><a class="admin_btn" href="/admin/">admin</a></div>
-
+<header>
+    <div class="header_logo"> Genshin Impact</div>
+</header>
+<body>
 {% block content%}
 <div class="intro">
 
-    <header class="header">
-        <div class="header_logo"> Genshin Impact</div>
-    </header>
+
 {% for article in articles %}
         <div class="intro_in">
-            <a class="btn" href="\view\{{ article.id }}"> {{ article.name }} </a>
+            <h1 align=center href="\view\{{ article.id }}"> {{ article.name }} </h1>
             <p>{{ article.full_text }}</p>
         </div>
 {% endfor %}
@@ -34,7 +33,7 @@
     Prosveschennikov Ruslan |
     Mostovoy Bogdasar P.S. Veseliy Hohol |
     <a class="a1" href="https://github.com/Carapetecks">GitHub</a> |
-    <a class="a1" href=""> Телеграм </a>
+    <a class="a1" href="https://2ch.hk"> Для даунов </a>
     <a class="a1" href=""></a>
     <a class="a1" href=""></a>
 </div>
