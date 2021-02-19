@@ -17,7 +17,10 @@ class SiteController
        $this->Categoryes =new CategoriesModel('category');
        $this->View = new SiteView();
    }
-
+public function article()
+{
+    include "Template/admin/inc/article_table.twig";
+}
    public function index()
    {
        $articles_list = $this->Articles->all();

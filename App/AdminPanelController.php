@@ -25,4 +25,9 @@ class AdminPanelController
         $category_count = $this->Categories->count();
         $this->View->dashboard($article_count, $category_count);
     }
+    public function articleTable()
+    {
+        $article_name=$this->Articles->text();
+        $this->View->articleTable($article_name, 0);
+    }
 }

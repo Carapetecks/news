@@ -9,6 +9,7 @@
     <title>Hello</title>
 </head>
 <div><a class="admin_btn" href="/admin/">admin</a></div>
+<div><a class="admin_btn" href="/admin/login/">login</a></div>
 <header>
     <div class="header_logo"> Genshin Impact</div>
 </header>
@@ -20,6 +21,7 @@
 {% for article in articles %}
         <div class="intro_in">
             <h1 align=center href="\view\{{ article.id }}"> {{ article.name }} </h1>
+            <h6 align=center href ="\view\{{ article.category_id }}">{{ category.name }}</h6>
             <p>{{ article.full_text }}</p>
         </div>
 {% endfor %}

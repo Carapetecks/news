@@ -11,9 +11,10 @@
 <body>
 {% block content %}
     <div>
-        {% for articles in articles %}
-            <h2>{{ articles.name }}</h2>
-            <p>{{ articles.full_text }}</p>
+        {% for article in articles %}
+            <h1 {{ article.id }}>{{ article.name }}</h1>
+            <h2 {{ article.name }}> </h2>
+            <h3 {{ article.full_text }}></h3>
         {% endfor%}
     </div>
 {% endblock %}

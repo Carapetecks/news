@@ -22,4 +22,8 @@ class ArticlesModel extends CoreModel
             return $result;
         }
     }
+    public function text()
+    {
+        return 'ou yes!!';
+    }
 }
