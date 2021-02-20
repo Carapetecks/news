@@ -28,6 +28,6 @@ class AdminPanelController
     public function articleTable()
     {
         $article_name=$this->Articles->text();
-        $this->View->articleTable($article_name, 0);
+        $this->View->articleTable($article_name);
     }
 }

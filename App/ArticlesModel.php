@@ -24,6 +24,15 @@ class ArticlesModel extends CoreModel
     }
     public function text()
     {
-        return 'ou yes!!';
+        $text = array();
+        $sql = "SELECT (*) AS  FROM " . $this->table;
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $text = $stmt->fetch(\PDO::FETCH_ASSOC);
+        if (empty($result)) {
+            return false;
+        } else {
+            return $text;
+        }
     }
 }
