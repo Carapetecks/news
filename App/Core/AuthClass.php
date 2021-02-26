@@ -11,7 +11,7 @@ class AuthClass
         if (isset($_POST['btnLogin'])){
             $login=$_POST['login'];
             $password=$_POST['password'];
-            if ($login=='user' && $password=='user'){
+            if ($login=='admin' && $password=='admin'){
                 $_SESSION['userName']=$login;
                 Serv::showAlert('Welcome - '.$login);
                 Serv::goUri('/admin/dashboard');
@@ -24,7 +24,7 @@ class AuthClass
     public static function logOut()
     {
         unset($_SESSION['userName']);
-        Serv::goUri('/admin/');
+        Serv::goUri('/');
 
     }
     public static function checkAuth(){

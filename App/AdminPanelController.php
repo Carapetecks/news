@@ -27,7 +27,16 @@ class AdminPanelController
     }
     public function articleTable()
     {
-        $article_name=$this->Articles->text();
+        $article_name = $this->Articles->article();
         $this->View->articleTable($article_name);
+    }
+    public function categoryTable()
+    {
+        $category_name = $this->Categories->category();
+        $this->View->categoryTable($category_name);
+    }
+    public function login()
+    {
+        include "Template/admin/login.twig";
     }
 }

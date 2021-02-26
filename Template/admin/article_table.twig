@@ -1,6 +1,6 @@
 {% extends "/admin/layout.twig" %}
-{% block content %}
-{% for article in articles %}
+
+
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
@@ -12,7 +12,9 @@
     </div>
         <div class="card-body">
             <div class="table-responsive">
+
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -33,17 +35,24 @@
                             <th>Salary</th>
                         </tr>
                     </tfoot>
+
                     <tbody>
+                    {% block table %}
+                    {% for article in articles %}
                         <tr>
-                            <td {{ article.id }}>{{ article.name }}</td>
-                            <td {{ article.category_id }}>{{ category }}</td>
+                            <td{{ article.articles_id }}>{{ article.name }}</td>
+                            <td {{ article.category_id }}>{{ category.name }}</td>
                             <td>Edinburgh</td>
                             <td>61</td>
                             <td>2011/04/25</td>
                             <td>$320,800</td>
                         </tr>
+                    {% endfor %}
+                    {% endblock %}
                     </tbody>
+
                 </table>
+
             </div>
         </div>
     </div>
@@ -51,6 +60,6 @@
 </div>
 
 <!-- /.container-fluid -->
-{% endfor %}
-{% endblock %}
+
+
 

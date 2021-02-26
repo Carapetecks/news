@@ -20,8 +20,5 @@ class CoreController
  {
      echo "<h1> page № $id </h1>";
  }
-public function login()
-{
-    include "Template/admin/inc/login.twig";
-}
+
 }

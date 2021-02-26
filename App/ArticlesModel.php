@@ -22,7 +22,7 @@ class ArticlesModel extends CoreModel
             return $result;
         }
     }
-    public function text()
+    public function article()
     {
         $text = array();
         $sql = "SELECT (*) AS  FROM " . $this->table;

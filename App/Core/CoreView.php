@@ -15,8 +15,8 @@ class CoreView
         $this->twig = new \Twig\Environment($this->loader, ['autoescape' => false]);
 
     }
-public  function index()
-    {
+    public  function index()
+        {
 
-    }
+        }
 }
